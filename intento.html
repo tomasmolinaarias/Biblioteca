@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Biblioteca - Gestión</title>
+    
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="#login">Iniciar Sesión</a></li>
+                <li><a href="#perfil">Perfil</a></li>
+                <li><a href="#inicio">Inicio</a></li>
+                <li><a href="#inventario">Inventario de Libros</a></li>
+                <li><a href="#reservas">Reservas</a></li>
+                <li><a href="#deudas">Deudas</a></li>
+                
+            </ul>
+        </nav>
+    </header>
+    
+    <main>
+        <section >
+            <h1>Bienvenido a la Biblioteca</h1>
+            <p>Gestión integral de libros, reservas y usuarios.</p>
+        </section>
+
+        <!-- inventario-->
+        <section>
+            <h2>Inventario de Libros</h2>
+            
+            <!-- actualizar libro-->
+            <form >
+                <h3>Actualizar Libro</h3>
+                <label>Buscar por Título:</label>
+                <input type="text" id="buscar-titulo" name="buscar-titulo">
+                <button type="button">Buscar</button>
+                
+                
+                <div>
+                    <div class="libro">
+                        <p>Título: <span class="titulo"></span></p>
+                        <p>Autor: <span class="autor"></span></p>
+                        <p>ISBN: <span class="isbn"></span></p>
+                        <button type="button">Actualizar</button>
+                        <button type="button">Eliminar</button>
+                    </div>
+                </div>
+            </form>
+        </section>
+
+        <!-- reserva sala de estudios-->
+        <section>
+            <h2>Reservas</h2>
+            <form>
+                <h3>Reservar Sala de Estudio</h3>
+                <label for="fecha">Fecha:</label>
+                <input type="date" id="fecha" name="fecha" required>
+                
+                <label for="hora">Hora:</label>
+                <input type="time" id="hora" name="hora" required>
+                
+                <button type="submit">Reservar</button>
+            </form>
+            
+            <form>
+                <h3>Reservar Libro</h3>
+                <label for="titulo-libro">Título del Libro:</label>
+                <input type="text" id="titulo-libro" name="titulo-libro" required>
+                
+                <label for="nombre-estudiante">Nombre del Estudiante:</label>
+                <input type="text" id="nombre-estudiante" name="nombre-estudiante" required>
+                
+                <button type="submit">Reservar Libro</button>
+            </form>
+        </section>
+
+        <!-- gestion de deudas-->
+        <section>
+            <h2>Gestión de Deudas</h2>
+            <form>
+                <label for="buscar-usuario">Buscar por Usuario:</label>
+                <input type="text" id="buscar-usuario" name="buscar-usuario">
+                <button type="button">Buscar</button>
+                
+                <!-- Resultados de búsqueda deuda -->
+                <div id="resultados-deudas">
+                   
+                    <div class="deuda">
+                        <p>Usuario: <span class="usuario"></span></p>
+                        <p>Deuda: <span class="cantidad"></span></p>
+                        <button type="button">Actualizar</button>
+                    </div>
+                </div>
+            </form>
+        </section>
+
+        <!-- perfil de usuario-->
+        <section>
+            <h2>Perfil</h2>
+            <form>
+                <h3>Gestionar Perfil de Bibliotecario</h3>
+                <label for="nombre-bibliotecario">Nombre:</label>
+                <input type="text" id="nombre-bibliotecario" name="nombre-bibliotecario" required>
+                
+                <label for="email-bibliotecario">Email:</label>
+                <input type="email" id="email-bibliotecario" name="email-bibliotecario" required>
+                
+                <button type="submit">Crear/Actualizar Bibliotecario</button>
+                <button type="button">Eliminar Bibliotecario</button>
+            </form>
+        </section>
+
+        <!-- iniciar sesion -->
+        <section>
+            <h2>Iniciar Sesión</h2>
+            <form>
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+                
+                <label for="password">Contraseña:</label>
+                <input type="password" id="password" name="password" required>
+                
+                <button type="submit">Iniciar Sesión</button>
+            </form>
+        </section>
+    </main>
+    
+    <footer>
+        <p>&copy; 2024 Biblioteca</p>
+    </footer>
+
+    
+</body>
+</html>
